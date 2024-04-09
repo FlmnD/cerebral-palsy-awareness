@@ -65,22 +65,26 @@
 
     </section>
 
-    <div class="flashcard-wrapper">
-        <button class="arrow left" onclick="prevCard()">&#10094;</button>
-        <div class="flashcard-container">
-            <div class="flashcard" onclick="toggleCard()">
-                <div class="term">Who Discovered Cerebral Palsy</div>
-                <div class="definition hidden">Dr. William John Little was the first person to define and seriously
-                    study cerebral palsy</div>
-            </div>
-            <div class="flashcard" onclick="toggleCard()">
-                <div class="term">How Many People Have Cerebral Palsy</div>
-                <div class="definition hidden">Driously
+    <section class="default-section">
+        <h2>Flashcard Fun Facts!</h2>
+        <div class="flashcard-wrapper">
+            <button class="arrow left" onclick="prevCard()">&#10094;</button>
+            <div class="flashcard-container">
+                <div class="flashcard" onclick="toggleCard()">
+                    <div class="term">
+                        <p></p>
+                    </div>
+                    <div class="definition">
+                        <p></p>
+                    </div>
                 </div>
             </div>
+            <button class="arrow right" onclick="nextCard()">&#10095;</button>
         </div>
-        <button class="arrow right" onclick="nextCard()">&#10095;</button>
-    </div>
+
+        <p class="counter"></p>
+    </section>
+
     <script src="index.js"></script>
 
 </body>

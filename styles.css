@@ -65,42 +65,54 @@ body {
 }
 
 .flashcard-wrapper {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 50vh;
+    /* Adjust height as needed */
 }
 
 .flashcard-container {
     width: 300px;
     height: 200px;
-    margin: 20px auto;
     position: relative;
     perspective: 1000px;
-    display: flex;
-    flex-direction: column;
 }
 
 .flashcard {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: relative;
     text-align: center;
     background-color: #f0f0f0;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     transition: transform 0.5s;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center flashcard content */
 }
 
 .term,
 .definition {
     font-size: 24px;
     color: black;
-    
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    /* Center term and definition content */
 }
 
 .hidden {
@@ -125,24 +137,34 @@ body {
     right: 0;
 }
 
-.flashcard {
-    /* Other styles */
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    width: 100%;
-}
-
 .flashcard.flipped {
     transform: rotateY(180deg);
 }
 
-.term,
-.definition {
-    /* Other styles */
+.term {
+    font-size: 24px;
+    color: black;
     backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center term content */
 }
 
 .definition {
+    font-size: 24px;
+    color: black;
+    backface-visibility: hidden;
+    display: none;
     transform: rotateY(180deg);
-    /* Rotates the backside content to be visible */
+    /* Hide definition content by default */
+}
+
+.flashcard.flipped .definition {
+    display: flex;
+    /* Show definition content when flipped */
+}
+
+.counter {
+    font-size: x-large;
 }

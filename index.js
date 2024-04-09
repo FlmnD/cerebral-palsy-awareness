@@ -1,18 +1,31 @@
 let currentCardIndex = 0;
-const flashcards = document.querySelectorAll('.flashcard');
+const flashcard = document.querySelector('.flashcard');
+const term = flashcard.querySelector('.term');
+const definition = flashcard.querySelector('.definition');
+const counter = document.querySelector('.counter');
+
+
+const terms = [
+    ["Who Discovered Cerebral Palsy?", "Dr. William John Little was the first person to define and seriously study cerebral palsy."],
+    ["How Many People Have Cerebral Palsy?", "Around 17 milion people have cerebral palsy."]
+];
+
+counter.innerHTML = currentCardIndex + 1 + "/" + terms.length;
+
+term.getElementsByTagName("p")[0].innerHTML = terms[0][0];
+definition.getElementsByTagName("p")[0].innerHTML = terms[0][1];
 
 function toggleCard() {
-    const term = flashcards[currentCardIndex].querySelector('.term');
-    const definition = flashcards[currentCardIndex].querySelector('.definition');
 
     term.classList.toggle('hidden');
     definition.classList.toggle('hidden');
 
-    flashcards[currentCardIndex].classList.toggle('flipped'); // Toggle rotation
+    flashcard.classList.toggle('flipped');
+
 }
 
 function nextCard() {
-    if (currentCardIndex < flashcards.length - 1) {
+    if (currentCardIndex < terms.length - 1) {
         currentCardIndex++;
         updateCard();
     }
@@ -26,11 +39,9 @@ function prevCard() {
 }
 
 function updateCard() {
-    for (let i = 0; i < flashcards.length; i++) {
-        if (i === currentCardIndex) {
-            flashcards[i].style.display = 'block';
-        } else {
-            flashcards[i].style.display = 'none';
-        }
-    }
+
+    counter.innerHTML = currentCardIndex + 1 + "/" + terms.length;
+    term.getElementsByTagName("p")[0].innerHTML = terms[currentCardIndex][0]
+    definition.getElementsByTagName("p")[0].innerHTML = terms[currentCardIndex][1]
+
 }
