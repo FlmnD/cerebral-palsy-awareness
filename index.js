@@ -7,7 +7,10 @@ const counter = document.querySelector('.counter');
 
 const terms = [
     ["Who Discovered Cerebral Palsy?", "Dr. William John Little was the first person to define and seriously study cerebral palsy."],
-    ["How Many People Have Cerebral Palsy?", "Around 17 milion people have cerebral palsy."]
+    ["How Many People Have Cerebral Palsy?", "Around 17 milion people have cerebral palsy."],
+    ["Will I get Cerebral Palsy?", "You cannot get cerebral palsy as an adult."],
+    ["What is the average lifespan for people with cerebral palsy?", "30-70 Years"],
+    ["Is there a cure?", "There currently is not a cure for cerbral palsy; however, therapies are used to lower the effects of the symptoms."]
 ];
 
 counter.innerHTML = currentCardIndex + 1 + "/" + terms.length;
