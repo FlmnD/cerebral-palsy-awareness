@@ -40,7 +40,6 @@ body {
 .info-block {
     display: flex;
     flex-direction: column;
-    /* Change to column layout */
     align-items: center;
     flex: 1 1 calc(30% - 20px);
     background-color: #333;
@@ -54,7 +53,6 @@ body {
 .info-block img {
     max-width: 100%;
     margin-bottom: 20px;
-    /* Adjust space between image and text */
 }
 
 .info-block p {
@@ -69,7 +67,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 50vh;
-    /* Adjust height as needed */
 }
 
 .flashcard-container {
@@ -93,7 +90,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Center flashcard content */
 }
 
 .term,
@@ -112,7 +108,6 @@ body {
     right: 0;
     bottom: 0;
     display: flex;
-    /* Center term and definition content */
 }
 
 .hidden {
@@ -148,7 +143,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Center term content */
 }
 
 .definition {
@@ -157,12 +151,10 @@ body {
     backface-visibility: hidden;
     display: none;
     transform: rotateY(180deg);
-    /* Hide definition content by default */
 }
 
 .flashcard.flipped .definition {
     display: flex;
-    /* Show definition content when flipped */
 }
 
 .counter {
